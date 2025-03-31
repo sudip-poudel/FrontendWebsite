@@ -5,14 +5,14 @@ function VIPSuite() {
   const colors = {
     background: "bg-[#DED2C5]",
     primary: "text-[#403E3E]",
-    secondary: "text-[#716C6C]",
+    secondary: "text-[#716C6C]",  // This is your desired color
     accent: "text-[#8B5A2B]",
-    dark: "text-[#4A4848]"
+    dark: "text-[#4A4848]",
+    black: "text-[#000000]"
   };
 
   // Benefits list
   const benefits = [
-    "AVAILABLE TO BOOK ONLINE FOR THE FULL PACKAGE & TONER PACKAGE AT NO ADDITIONAL COSTS",
     "IDEAL FOR OUR SCARFED CLIENTS OR THOSE WANTING EXTRA PRIVACY",
     "GET ALL DAY ACCESS TO THE PRIVATE LOUNGE",
     "EXPERIENCE EXCLUSIVE PREMIUM AMENITIES",
@@ -26,8 +26,8 @@ function VIPSuite() {
   ];
 
   return (
-    <section className="mt-12">
-      <div className="flex flex-col md:flex-row gap-5">
+    <section className="z-10">
+      <div className="flex flex-col md:flex-row gap-0">
         {/* Image */}
         <div className="w-full md:w-1/2">
           <img
@@ -39,14 +39,21 @@ function VIPSuite() {
 
         {/* Content Card */}
         <div className="w-full md:w-1/2">
-          <div className={`${colors.background} flex flex-col items-center px-8 py-12 rounded-lg`}>
-            <h3 className={`text-4xl font-serif font-light ${colors.accent} text-center`}>
+          <div className={`${colors.background} flex flex-col items-start px-8 py-12 rounded-lg`}>
+            <h3 className={`text-6xl font-serif font-light ${colors.black} text-left`}>
               VIP Private Suite
             </h3>
+            <p className={`text-2xl uppercase tracking-wider mt-4 text-left ${colors.primary}`}>
+              LUXURY EXPERIENCE
+            </p>
+            <p className="text-xl uppercase mt-4 text-left">
+              AVAILABLE TO BOOK ONLINE FOR THE FULL PACKAGE & TONER PACKAGE AT NO ADDITIONAL COSTS
+            </p>
 
-            <div className="w-full mt-10 space-y-6">
+            {/* Benefits with bullet points - now in #716C6C */}
+            <ul className="w-full mt-5 space-y-3 pl-12 list-disc">
               {benefits.map((benefit, index) => (
-                <p key={index} className="text-lg text-center">
+                <li key={index} className={`text-lg text-left ${colors.secondary}`}>
                   {benefit.includes("SCARFED CLIENTS") || benefit.includes("EXTRA PRIVACY") ? (
                     <>
                       {benefit.split(/(SCARFED CLIENTS|EXTRA PRIVACY)/).map((part, i) =>
@@ -60,17 +67,18 @@ function VIPSuite() {
                   ) : (
                     benefit
                   )}
-                </p>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            <h4 className={`text-2xl font-bold mt-12 ${colors.dark}`}>
+            <h4 className={`text-2xl font-bold mt-12 ${colors.black} text-left`}>
               TREAT YOURSELF
             </h4>
 
-            <div className="w-full mt-8 space-y-6">
+            {/* Occasions with bullet points - now in #716C6C */}
+            <ul className="w-full mt-8 space-y-3 pl-12 list-disc">
               {occasions.map((occasion, index) => (
-                <p key={index} className="text-lg text-center">
+                <li key={index} className={`text-lg text-left ${colors.secondary}`}>
                   {occasion.split(":").map((part, i) =>
                     i === 0 ? (
                       <span key={i} className="font-bold text-[#4A4848]">{part}:</span>
@@ -78,12 +86,14 @@ function VIPSuite() {
                       part
                     )
                   )}
-                </p>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            <p className="text-lg text-center mt-12">
-              PLEASE CALL OR EMAIL TO ORGANISE YOUR NEXT EVENT
+            <p className="text-lg text-left mt-12">
+              <span className={`${colors.secondary}`}>
+                PLEASE CALL OR EMAIL TO ORGANISE YOUR NEXT EVENT
+              </span>
             </p>
           </div>
         </div>
@@ -91,4 +101,5 @@ function VIPSuite() {
     </section>
   );
 }
+
 export default VIPSuite;
