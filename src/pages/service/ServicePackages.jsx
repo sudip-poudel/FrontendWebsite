@@ -18,7 +18,7 @@ function ServicePackages() {
                         "INCLUDES A CUSTOM MIX & MELT APPLICATION TO ACHIEVE RESULTS OF THE SAME LEVEL OR DARKER THAN YOUR EXISTING HAIR",
                     ]}
                     serviceTime="2-3 HOURS"
-                    imageSrc="./Image/ImageServicePage.png"  // ✅ Pass image as a prop
+                    imageSrc="./Image/ImageServicePage.png"  
                     imagePosition="top"
                 />
 
@@ -38,7 +38,7 @@ function ServicePackages() {
                         "CUT, WASH, BLOW DRY & STYLE",
                     ]}
                     serviceTime="FROM 6-8 HOURS"
-                    imageSrc="https://cdn.builder.io/api/v1/image/assets/1f079ecdac7846a19765c1effea3733f/e1fb88f52c27501e6f88397419ebb4cc96ff8e53?placeholderIfAbsent=true"
+                    imageSrc="./Image/ImageServicePage2.png"
                     imagePosition="bottom"
                 />
             </div>

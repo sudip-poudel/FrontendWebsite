@@ -1,60 +1,90 @@
 import React from "react";
 
 function VIPSuite() {
+  // Color variables
+  const colors = {
+    background: "bg-[#DED2C5]",
+    primary: "text-[#403E3E]",
+    secondary: "text-[#716C6C]",
+    accent: "text-[#8B5A2B]",
+    dark: "text-[#4A4848]"
+  };
+
+  // Benefits list
+  const benefits = [
+    "AVAILABLE TO BOOK ONLINE FOR THE FULL PACKAGE & TONER PACKAGE AT NO ADDITIONAL COSTS",
+    "IDEAL FOR OUR SCARFED CLIENTS OR THOSE WANTING EXTRA PRIVACY",
+    "GET ALL DAY ACCESS TO THE PRIVATE LOUNGE",
+    "EXPERIENCE EXCLUSIVE PREMIUM AMENITIES",
+    "SUBJECT TO AVAILABILITY"
+  ];
+
+  // Special occasions
+  const occasions = [
+    "PRIVATE HAIR SESSION : BRIDAL PARTY, HENS, BUCKS OR SPECIAL OCCASION",
+    "SURPRISE A LOVED ONE : WE'LL DO OUR BEST TO ACCOMMODATE SPECIAL REQUESTS"
+  ];
+
   return (
-    <section className="max-md:max-w-full">
-      <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-        <div className="w-6/12 max-md:w-full max-md:ml-0">
+    <section className="mt-12">
+      <div className="flex flex-col md:flex-row gap-5">
+        {/* Image */}
+        <div className="w-full md:w-1/2">
           <img
             src="./Image/ImageServicePage3.png"
             alt="VIP Suite"
-            className="aspect-[0.91] object-contain w-full grow max-md:max-w-full"
+            className="w-full h-full object-cover rounded-lg aspect-[0.91]"
           />
         </div>
-        <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0">
-          <div className="bg-[rgba(222,210,197,1)] flex flex-col items-center text-lg text-[rgba(113,108,108,1)] font-normal w-full pt-[58px] pb-[98px] px-[35px] max-md:max-w-full max-md:px-5">
-            <h3 className="text-black text-[40px] font-light text-center">
-              VIP private suite
+
+        {/* Content Card */}
+        <div className="w-full md:w-1/2">
+          <div className={`${colors.background} flex flex-col items-center px-8 py-12 rounded-lg`}>
+            <h3 className={`text-4xl font-serif font-light ${colors.accent} text-center`}>
+              VIP Private Suite
             </h3>
-            <div className="text-xl text-center mt-[43px] max-md:max-w-full max-md:mt-10">
-              AVAILABLE TO BOOK ONLINE FOR THE FULL PACKAGE & TONER PACKAGE AT
-              NO ADDITIONAL COSTS
+
+            <div className="w-full mt-10 space-y-6">
+              {benefits.map((benefit, index) => (
+                <p key={index} className="text-lg text-center">
+                  {benefit.includes("SCARFED CLIENTS") || benefit.includes("EXTRA PRIVACY") ? (
+                    <>
+                      {benefit.split(/(SCARFED CLIENTS|EXTRA PRIVACY)/).map((part, i) =>
+                        part.match(/SCARFED CLIENTS|EXTRA PRIVACY/) ? (
+                          <span key={i} className="font-bold text-[#4A4848]">{part}</span>
+                        ) : (
+                          part
+                        )
+                      )}
+                    </>
+                  ) : (
+                    benefit
+                  )}
+                </p>
+              ))}
             </div>
-            <div className="text-center mt-12 max-md:max-w-full max-md:mt-10">
-              IDEAL FOR OUR{" "}
-              <span className="font-bold text-[rgba(74,72,72,1)]">
-                SCARFED CLIENTS
-              </span>{" "}
-              OR THOSE WANTING{" "}
-              <span className="font-bold text-[rgba(79,76,76,1)]">
-                EXTRA PRIVACY
-              </span>
-            </div>
-            <div className="text-center ml-[26px] mt-[19px]">
-              GET ALL DAY ACCESS TO THE PRIVATE LOUNGE
-            </div>
-            <div className="text-center ml-[26px] mt-[25px]">
-              EXPERIENCE EXCLUSIVE PREMIUM AMENITIES
-            </div>
-            <div className="text-center mt-[25px]">SUBJECT TO AVAILABILITY</div>
-            <div className="text-xl font-bold text-center ml-[49px] mt-[74px] max-md:ml-2.5 max-md:mt-10">
+
+            <h4 className={`text-2xl font-bold mt-12 ${colors.dark}`}>
               TREAT YOURSELF
+            </h4>
+
+            <div className="w-full mt-8 space-y-6">
+              {occasions.map((occasion, index) => (
+                <p key={index} className="text-lg text-center">
+                  {occasion.split(":").map((part, i) =>
+                    i === 0 ? (
+                      <span key={i} className="font-bold text-[#4A4848]">{part}:</span>
+                    ) : (
+                      part
+                    )
+                  )}
+                </p>
+              ))}
             </div>
-            <div className="text-center ml-[31px] mt-[34px]">
-              <span className="font-bold text-[rgba(59,57,57,1)]">
-                PRIVATE HAIR SESSION
-              </span>{" "}
-              : BRIDAL PARTY, HENS, BUCKS OR SPECIAL OCCASION
-            </div>
-            <div className="mr-12 mt-[35px] max-md:max-w-full max-md:mr-2.5">
-              <span className="font-bold text-[rgba(52,50,50,1)]">
-                SURPRISE A LOVED ONE
-              </span>{" "}
-              : WE'LL DO OUR BEST TO ACCOMMODATE SPECIAL REQUESTS
-            </div>
-            <div className="text-center mt-[73px] max-md:max-w-full max-md:mt-10">
-              PLEASE CALL OR EMAIL TO ORGANISE YOUR NEXT EVENTS
-            </div>
+
+            <p className="text-lg text-center mt-12">
+              PLEASE CALL OR EMAIL TO ORGANISE YOUR NEXT EVENT
+            </p>
           </div>
         </div>
       </div>

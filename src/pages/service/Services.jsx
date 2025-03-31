@@ -12,9 +12,16 @@ function Services() {
       <Banner />
       <Navbar />
       <div>
-        <img src="./Image/ImageHeroSection.png" alt=""
-          className="w-full h-full object-cover"
-        />
+        <div className="relative w-full h-[500px] sm:h-[600px] lg:h-[700px]">
+          <img
+            src="./Image/ImageHeroSection.png"
+            alt="Hero Section"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10"></div>
+        </div>
+
+
       </div>
       <div className="absolute text-white left-1/2 top-[55%] transform -translate-x-1/2 text-center">
         <h1 className="text-[80px] mb-[10px] max-sm:text-[50px] font-serif">SALON SERVICES</h1>
@@ -28,10 +35,10 @@ function Services() {
         </button>
       </div>
       <div className='mt-10'>
-        <ServiceCard/>
-        <ServicePackages/>
-        <VIPSuite/>
-        <CutAndStyle/>
+        <ServiceCard />
+        <ServicePackages />
+        <VIPSuite />
+        <CutAndStyle />
       </div>
     </>
   )
