@@ -88,11 +88,11 @@ function CutAndStyle() {
             </div>
 
             <div className="mt-10 text-left">
-  <p className="text-lg">
-    <span className="text-[#716C6C]">PLEASE CALL FOR </span>
-    <span className="font-bold text-[#403E3E]">AFTER HOURS BARBERING</span>
-  </p>
-</div>
+              <p className="text-lg">
+                <span className="text-[#716C6C]">PLEASE CALL FOR </span>
+                <span className="font-bold text-[#403E3E]">AFTER HOURS BARBERING</span>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -101,7 +101,7 @@ function CutAndStyle() {
           <img
             src="./Image/ImageServicePage4.png"
             alt="Cut and Style"
-            className="w-full h-full object-cover rounded-lg aspect-[0.9]"
+            className="w-full h-64 md:h-215 object-cover rounded-lg aspect-[0.91]"
           />
         </div>
       </div>

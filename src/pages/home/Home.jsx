@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../component/Navbar'
 import Banner from '../component/banner/Banner'
+import Footer from '../component/footer/Footer'
 
 function Home() {
     return (
         <>
             <Banner />
             <Navbar />
-
             <section className="relative w-full h-[889px]">
                 <img src="./Image/HeroSection.jpg" alt=""
                     className="w-full h-full object-cover"
@@ -47,6 +47,19 @@ function Home() {
                     </button>
                 </div>
             </div>
+            <section className="w-full">
+                <div className="grid grid-cols-3">
+                    <img src="./Image/Home1.png" alt="Style 1" className="w-full h-auto object-cover" />
+                    <img src="./Image/Home2.png" alt="Style 2" className="w-full h-auto object-cover" />
+                    <img src="./Image/Home3.png" alt="Style 3" className="w-full h-auto object-cover" />
+                </div>
+                <div className="grid grid-cols-3">
+                    <img src="./Image/Home4.png" alt="Style 4" className="w-full h-auto object-cover" />
+                    <img src="./Image/Home5.png" alt="Style 5" className="w-full h-auto object-cover" />
+                    <img src="./Image/Home6.png" alt="Style 6" className="w-full h-auto object-cover" />
+                </div>
+            </section>
+            <Footer />
         </>
 
     )

@@ -5,6 +5,7 @@ import CutAndStyle from './CutAndStyle'
 import VIPSuite from './VIPSuite'
 import FullPackage from './FullPackage'
 import TonerPackage from './TonerPackage'
+import Footer from '../component/footer/Footer'
 
 function Services() {
   return (
@@ -21,7 +22,6 @@ function Services() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10"></div>
         </div>
 
-
       </div>
       <div className="absolute text-white left-1/2 top-[55%] transform -translate-x-1/2 text-center">
         <h1 className="text-[80px] mb-[10px] max-sm:text-[50px] font-serif">SALON SERVICES</h1>
@@ -35,7 +35,7 @@ function Services() {
         </button>
       </div>
       
-      <div className='mt-10'>
+      <div className='mt-0'>
         <FullPackage />
         <TonerPackage />
         <VIPSuite />
@@ -50,6 +50,7 @@ function Services() {
           Book Online
         </button>
       </div>
+      <Footer/>
 
     </>
   )

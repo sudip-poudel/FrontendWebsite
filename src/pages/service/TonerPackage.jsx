@@ -78,7 +78,7 @@ function TonerPackage() {
                     <img
                         src="./Image/ImageServicePage2.png"
                         alt="Toner Package"
-                        className="w-full h-64 md:h-138 object-cover rounded-lg aspect-[0.91]"
+                        className="w-full h-64 md:h-143 object-cover rounded-lg aspect-[0.91]"
                     />
                 </div>
 

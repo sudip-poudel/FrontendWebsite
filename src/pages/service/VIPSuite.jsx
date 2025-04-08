@@ -33,7 +33,7 @@ function VIPSuite() {
           <img
             src="./Image/ImageServicePage3.png"
             alt="VIP Suite"
-            className="w-full h-full object-cover rounded-lg aspect-[0.91]"
+            className="w-full h-64 md:h-182 object-cover rounded-lg aspect-[0.91]"
           />
         </div>
 

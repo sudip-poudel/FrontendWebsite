@@ -85,7 +85,7 @@ function FullPackage() {
                     <img
                         src="./Image/ImageServicePage.png"
                         alt="Toner Package"
-                        className="w-full h-64 md:h-162 object-cover rounded-lg aspect-[0.91]"
+                        className="w-full h-64 md:h-155 object-cover rounded-lg aspect-[0.91]"
                     />
                 </div>
             </div>
