@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../component/Navbar'
 import Banner from '../component/banner/Banner'
 import ServiceList from '../booking/ServiceList'
@@ -7,6 +7,7 @@ import BookingPage from '../booking/BookingPage'
 import Footer from '../component/footer/Footer'
 
 function Booking() {
+  const [ location , setLocation ] = useState('')
   return (
     <>
       <Banner />

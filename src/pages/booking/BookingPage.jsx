@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import AppointmentForm from "./AppointmentForm"; // Make sure path is correct
+import AppointmentForm from "./AppointmentForm"; 
+import { Link } from "react-router-dom";
 
 const LocationSelector = ({ locations, selectedLocation, onLocationChange }) => {
     return (
@@ -69,7 +70,10 @@ const BookingPage = () => {
                     onSubmit={handleSubmit}
                     className="w-full max-w-[631px] rounded bg-white p-5 max-md:max-w-[90%]"
                 >
-                    <div className="text-right text-[32px] text-black mb-5 max-sm:text-2xl">Log in</div>
+
+                    <div className="text-right text-[32px] text-black mb-5 max-sm:text-2xl">
+                        <Link to="/login" className="text-black hover:text-gray-300">Log in</Link>
+                    </div>
                     <div className="h-px bg-black mb-5" />
                     <div className="mb-10">
                         <LocationSelector
@@ -89,7 +93,7 @@ const BookingPage = () => {
 
             {showForm && (
                 <div id="appointment-form" className="mt-16 w-full">
-                    <AppointmentForm goBack={() => setShowForm(false)} />
+                    <AppointmentForm goBack={() => setShowForm(false)}  location={selectedLocation}/>
                 </div>
             )}
 

@@ -47,16 +47,65 @@ function Home() {
                     </button>
                 </div>
             </div>
-            <section className="w-full">
-                <div className="grid grid-cols-3">
-                    <img src="./Image/Home1.png" alt="Style 1" className="w-full h-auto object-cover" />
-                    <img src="./Image/Home2.png" alt="Style 2" className="w-full h-auto object-cover" />
-                    <img src="./Image/Home3.png" alt="Style 3" className="w-full h-auto object-cover" />
+            <section className="w-full px-4">
+                <div className="grid grid-cols-3 gap-4">
+                    {/* First row */}
+                    <div onClick={() => window.open("https://www.instagram.com/reel/DIaFJemyWHq/", "_blank")}>
+                        <iframe
+                            className="w-full aspect-video"
+                            src="https://www.instagram.com/reel/DIaFJemyWHq/embed"
+                            allowFullScreen
+                            title="Instagram Video 1"
+                        ></iframe>
+                    </div>
+
+                    <div onClick={() => window.open("https://www.instagram.com/reel/DIF7NpoSWUi/", "_blank")}>
+                        <iframe
+                            className="w-full aspect-video"
+                            src="https://www.instagram.com/reel/DIF7NpoSWUi/embed"
+                            allowFullScreen
+                            title="Instagram Video 2"
+                        ></iframe>
+                    </div>
+
+                    <div onClick={() => window.open("https://www.instagram.com/reel/DHhNDdez42s/", "_blank")}>
+                        <iframe
+                            className="w-full aspect-video"
+                            src="https://www.instagram.com/reel/DHhNDdez42s/embed"
+                            allowFullScreen
+                            title="Instagram Video 3"
+                        ></iframe>
+                    </div>
                 </div>
-                <div className="grid grid-cols-3">
-                    <img src="./Image/Home4.png" alt="Style 4" className="w-full h-auto object-cover" />
-                    <img src="./Image/Home5.png" alt="Style 5" className="w-full h-auto object-cover" />
-                    <img src="./Image/Home6.png" alt="Style 6" className="w-full h-auto object-cover" />
+
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                    {/* Second row */}
+                    <div onClick={() => window.open("https://www.instagram.com/reel/DHSFDZZSfeL/", "_blank")}>
+                        <iframe
+                            className="w-full aspect-video"
+                            src="https://www.instagram.com/reel/DHSFDZZSfeL/embed"
+                            allowFullScreen
+                            title="Instagram Video 4"
+                        ></iframe>
+                    </div>
+
+                    <div onClick={() => window.open("https://www.instagram.com/reel/DGrLOuuTQIO/", "_blank")}>
+                        <iframe
+                            className="w-full aspect-video"
+                            src="https://www.instagram.com/reel/DGrLOuuTQIO/embed"
+                            allowFullScreen
+                            title="Instagram Video 5"
+                        ></iframe>
+                    </div>
+
+                    <div onClick={() => window.open("https://www.instagram.com/reel/DFgrls3SZw2/", "_blank")}>
+                        <iframe
+                            className="w-full aspect-video"
+                            src="https://www.instagram.com/reel/DFgrls3SZw2/embed"
+                            allowFullScreen
+                            title="Instagram Video 6"
+                        ></iframe>
+                    </div>
                 </div>
             </section>
             <Footer />
