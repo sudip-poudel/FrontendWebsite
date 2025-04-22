@@ -15,7 +15,7 @@ function Navbar() {
                 <Link to="/services" className="text-lg font-light text-black hover:text-[#BF997E] transition-colors font-inter">Salon Services</Link>
                 <Link to="/booking" className="text-lg font-light text-black hover:text-[#BF997E] transition-colors font-inter">Bookings</Link>
                 <Link to="/contact" className="text-lg font-light text-black hover:text-[#BF997E] transition-colors font-inter">Contact</Link>
-                <Link to="/login" className="text-lg font-light text-black hover:text-[#BF997E] transition-colors font-inter">Login</Link>
+                <Link to="/register" className="text-lg font-light text-black hover:text-[#BF997E] transition-colors font-inter">Login</Link>
 
 
             </div>
