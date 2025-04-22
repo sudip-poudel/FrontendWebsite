@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Booking from './pages/Booking/Booking'
+import Booking from './pages/booking/Booking'
 import Home from './pages/home/Home'
 import Services from './pages/service/Services'
 import Contact from './pages/contact/Contact'
