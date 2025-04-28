@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from '../component/Navbar'
 import Banner from '../component/banner/Banner'
 import ServiceList from '../booking/ServiceList'
@@ -7,7 +7,6 @@ import BookingPage from '../booking/BookingPage'
 import Footer from '../component/footer/Footer'
 
 function Booking() {
-  const [ location , setLocation ] = useState('')
   return (
     <>
       <Banner />
@@ -26,6 +25,9 @@ function Booking() {
           </div>
           <div className="text-[80px] max-sm:text-[40px] font-serif">BOOK ONLINE</div>
         </div>
+      </div>
+      <div>
+        <BookingPage />
       </div>
       <div>
         <ServiceList />
@@ -57,10 +59,7 @@ function Booking() {
           <img src="./Image/img8.jpg" alt="Image 8" class="w-full h-full object-cover" />
         </div>
       </div>
-      <div>
-        <BookingPage/>
-      </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }
