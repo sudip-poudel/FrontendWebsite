@@ -98,11 +98,15 @@ export default function AppointmentForm({ goBack, branchId }) {
           branchId: "",
         });
       } catch (error) {
+				if (error.response && error.response.status === 400) {
+					console.error(error);
+					return alert("Appointment for choosen staff is already booked for this time.");
+				}
         alert("Failed to book appointment.");
         console.error(error);
+			}
       }
     }
-  };
   const handlePayment = async (e, totalPrice) => {
     e.preventDefault();
     if (!validate()) return
